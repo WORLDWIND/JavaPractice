@@ -37,5 +37,6 @@ public class Java04_Object_String_1 {
         /**想要截取World*/
         System.out.println(s.substring(6, s.length()));
         System.out.println("牛逼");
+        System.out.println("GitTest,看看能不能传上去");
     }
 }
