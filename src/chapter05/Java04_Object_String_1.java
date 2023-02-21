@@ -36,5 +36,6 @@ public class Java04_Object_String_1 {
         System.out.println(s.substring(0, "Hello".length()));
         /**想要截取World*/
         System.out.println(s.substring(6, s.length()));
+        System.out.println("牛逼");
     }
 }
