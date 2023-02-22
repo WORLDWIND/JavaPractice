@@ -1,5 +1,8 @@
 package chapter05;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /**
  * @program: java-top-speed
  * @author: Mr.WorldWind
@@ -39,5 +42,12 @@ public class Java04_Object_String_1 {
         System.out.println("牛逼");
         System.out.println("GitTest,看看能不能传上去");
         System.out.println("Hello World");
+        /**substring方法如果只传入一个参数,那么就表示从指定位置,截取到最后*/
+        System.out.println(s.substring(6));//World
+
+        //分解字符串 根据指定规则对字符串进行分解,可以将一个完整的字符串,分解成几部分
+        String[] s1 = s.split(" ");
+        System.out.println(s1.length);
+        System.out.println(Arrays.toString(s1));
     }
 }
