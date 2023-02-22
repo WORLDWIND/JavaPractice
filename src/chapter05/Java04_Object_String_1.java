@@ -49,5 +49,15 @@ public class Java04_Object_String_1 {
         String[] s1 = s.split(" ");
         System.out.println(s1.length);
         System.out.println(Arrays.toString(s1));
+        String s2 = "liyuhang,kongfansheng,wangjunbo,lihuanying,zhangwei";
+        String[] split = s2.split(",");
+        System.out.println(Arrays.toString(split));
+        for (String s3 : split) {
+            System.out.println(s3);
+        }
+        //TODO trim : 去掉字符串的首位空格
+        String s3 = "   Hello World         ";
+        System.out.println("!"+s3.trim()+"!");//!Hello World!
+
     }
 }
