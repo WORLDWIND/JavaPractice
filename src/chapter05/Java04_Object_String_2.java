@@ -27,5 +27,6 @@ public class Java04_Object_String_2 {
         System.out.println(s.toString());
         System.out.println(s.reverse());//反转操作
         System.out.println(s.insert(1, "d"));//将d插入到数组下标为1的位置
+        System.out.println("test");
     }
 }
