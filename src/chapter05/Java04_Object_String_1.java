@@ -1,5 +1,6 @@
 package chapter05;
 
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
@@ -9,7 +10,7 @@ import java.util.Arrays;
  * @create: 2023/2/21  19:06
  **/
 public class Java04_Object_String_1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedEncodingException {
         String a = "a";
         String b = "A";
         /*System.out.println(a.equals(b));//相等的比较
@@ -59,5 +60,46 @@ public class Java04_Object_String_1 {
         String s3 = "   Hello World         ";
         System.out.println("!"+s3.trim()+"!");//!Hello World!
 
+        //TODO 字符串的替换
+        String s4 = "Hello World World";
+        //替换,只能替换一个
+        System.out.println(s4.replace("World", "Java"));//Hello Java Java
+        String s5 = "Hello World zhangsan";
+        //replaceAll按照指定的规则进行替换
+        System.out.println(s5.replaceAll("World|zhangsan", "Java"));//Hello Java Java
+
+        //TODO 字符串的大小写替换
+        String s6 = "Hello World";
+        System.out.println(s6.toLowerCase());//hello world
+        System.out.println(s6.toUpperCase());//HELLO WORLD
+        /**需求,首字母大写*/
+        String s7 = "user";
+        String c = s7.substring(0,1);
+        String d = s7.substring(1);
+        System.out.println(c.toUpperCase() + d);
+
+        //TODO 字符串的查找
+        String s8 = "Hello World";
+        char[] chars = s8.toCharArray();
+        byte[] bytes = s8.getBytes("UTF-8");
+        //charAt可以传递索引定位字符串中指定位置的字符
+        System.out.println(s8.charAt(1));//e
+        //TODO indexOf方法用于获取数据在字符串中第一次出现的位置
+        String s9 = "World Hello World";
+        System.out.println(s9.indexOf("World"));//0
+        //lastIndexOf方法用于获取数据在字符串中最后出现的位置
+        System.out.println(s9.lastIndexOf("World"));//12
+        System.out.println(s9.indexOf("j"));//没有返回-1
+
+        //TODO 是否包含指定字符串 返回Boolean类型 严格区分大小写
+        String s10 = "Hello World Hello";
+        System.out.println(s10.contains("world"));
+        //判断字符串是否以指定字符串开头
+        System.out.println(s10.startsWith("Hello"));
+        //判断字符串是否以指定字符串结尾
+        System.out.println(s10.endsWith("Hello"));
+        //判断字符串是否为空,空其实是一个特殊的字符,所以看不到,但是不为空
+        System.out.println(s10.isEmpty());
+        System.out.println(" ".isEmpty());//false
     }
 }
