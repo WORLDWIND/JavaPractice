@@ -35,6 +35,7 @@ public class Java07_Object_Date_Test {
                     System.out.println(monthY);
                 }
                 else{
+                    //周日是1 周一是2,周六是7...
                     for (int j = 0; j < weekX - 2; j++) {
                         System.out.print("\t");
                     }
