@@ -20,6 +20,9 @@ public class Java07_Object_Date {
 
         instance.setTime(new Date());
         System.out.println(instance);
-        instance.add(Calendar.YEAR,-1);
+        //instance.add(Calendar.YEAR,-1);
+        //System.out.println(instance.get(Calendar.YEAR));
+        System.out.println(instance.get(Calendar.DAY_OF_WEEK));
+        System.out.println(instance.get(Calendar.MONTH));
     }
 }
