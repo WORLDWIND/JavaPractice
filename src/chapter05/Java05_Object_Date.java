@@ -32,12 +32,12 @@ public class Java05_Object_Date {
          */
         //Date --> String
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss.SSS");
-        System.out.println(sdf.format(d));
+        System.out.println(sdf.format(d)+"-------");
 
         //String --> Date
         String dataString = "2022-8-1 16-16-16.666";
         Date parseDate = sdf.parse(dataString);
-        System.out.println(parseDate);
+        System.out.println(parseDate+"-----");
 
         //TODO 根据时间戳构建指定的日期对象
         //d.setTime(System.currentTimeMillis());
